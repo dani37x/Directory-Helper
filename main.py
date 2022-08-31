@@ -1,11 +1,13 @@
 import os
 
+# Before use:
+# Change path
+# add important files, which you do not want segregation
+# or can not be segregation!
 
-# def segregation():
-  # path = '/home/runner/os-foldery/templates'
-def segregation():
-  important_files = ['.cache','venv','.config','.upm','poetry.lock','pyproject.toml','replit.nix','.replit','.breakpoints','main.py']
-  for file in os.listdir():
+def segregation(path='path/to/your/folder/'):
+  important_files = ['']
+  for file in os.listdir(path):
     if file not in important_files and file != 'templates' and not file.endswith('_files'):
       end_file = file.split('.')
       start_file = end_file[0]
@@ -17,5 +19,4 @@ def segregation():
         os.system('mkdir ' + end_file +'_files')
         os.system('mv ' + start_file+'.'+end_file +' ' +end_file+'_files') 
       
-
-segregation()   
+  
