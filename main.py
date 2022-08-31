@@ -1,9 +1,6 @@
 import os
 
-# Before use:
-# Change path
-# add important files, which you do not want segregation
-# or can not be segregation!
+
 
 def segregation(path='path/to/your/folder/'):
   important_files = ['']
